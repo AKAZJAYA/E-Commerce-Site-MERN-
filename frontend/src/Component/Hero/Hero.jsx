@@ -1,5 +1,5 @@
 import React from 'react'
-import './Hero';
+import './Hero.css';
 
 import hand_icon from '../Assets/hand_icon.png';
 import arrow_icon from '../Assets/arrow.png';
@@ -14,7 +14,7 @@ const Hero = () => {
         <h2>NEW ARRIVALS ONLY</h2>
             <div>
 
-                <div className="hand_hand_">
+                <div className="hand_hand_icon">
 
                     <p>new</p>
                     <img src={hand_icon} alt="hand_icon" />
