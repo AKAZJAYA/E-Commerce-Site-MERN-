@@ -4,42 +4,31 @@ import Popular from "../Component/Popular/popular";
 import Offers from "../Component/Offers/Offers";
 import NewCollenction from "../Component/NewCollenction/NewCollection";
 import NewsLetter from "../Component/NewsLetter/NewsLetter";
-import { useState,useEffect } from "react";
+
 
 
 const Shop = () =>{
     
-    const [posts,setPost] = useState([]);
+    //     async function fetch_data(){           
+    //         const request = await fetch("https://jsonplaceholder.typicode.com/post",{method: "GET"});
+    //         if(request.status === 200){
 
-    useEffect(() =>{      
-        async function fetch_data(){           
-            const request = await fetch("https://jsonplaceholder.typicode.com/post",{method: "GET"});
-            if(request.status === 200){
+    //             const result = await request.json();
+    //             console.log(result);
+    //             setPost(result);
+    //         }
+    //         if(request.status === 404){
 
-                const result = await request.json();
-                console.log(result);
-                setPost(result);
-            }
-            if(request.status === 404){
-
-                console.log("Error");
-            }
-        }
-        fetch_data();
-    },[]);
+    //             console.log("Error");
+    //         }
+    //     }
+    //     fetch_data();
+    // },[]);
     
     return(
 
         <div>
-            {posts.map(post =>{
-
-                return (
-
-                    <div key={post.userId}>
-                        <p>{post.title}</p>
-                    </div>
-                )
-            })}
+            
             <Hero/>
             <Popular/>
             <Offers/>
