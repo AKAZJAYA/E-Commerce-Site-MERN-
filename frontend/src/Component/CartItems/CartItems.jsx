@@ -7,6 +7,8 @@ const CartItems = () => {
 
     const {gettotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext);
 
+    console.log(gettotalCartAmount());
+
   return (
     <div className='cartitems'>
       <div className="cartItems_format_main">
